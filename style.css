@@ -15,9 +15,11 @@
     --font-action: "Mulish", serif;
 }
 
-/* body{
-    font-size: 16px;
-} */
+html{
+    scroll-behavior: smooth;
+}
+
+
 
 .hamburguer{
     width: 2rem;
@@ -202,6 +204,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 99;
 }
 
 .show-menu .sidebar{
@@ -558,17 +561,38 @@ header{
 }
 
 .sessao-orcamento form{
-    margin: 4rem;
+    /* margin: 4rem; */
+    margin: 10rem 4rem 0 4rem;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
 }
 
+.group-layout{
+    /* width: auto; */
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: auto 1fr;
+}
+
+/* .group-layout div{
+    width: auto;
+} */
+
+.div-layout-sim{
+    grid-column: 1;
+}
+
+.div-layout-nao{
+    grid-column: 2;
+}
+
 .sessao-orcamento label{
     font-family: var(--font-secundary);
     font-size: 1.5rem;
     font-weight: bold;
+    width: auto;
 }
 
 .sessao-orcamento input[type="number"]{
@@ -586,4 +610,61 @@ header{
     padding: 1rem;
     cursor: pointer;
     grid-column: 2;
+}
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    z-index: 100;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);
+    background: linear-gradient(to left, #a044ff, #6a3093);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0 0.1rem 0.6rem #00000009;
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
+}
+
+.show-menu #link-topo{
+    opacity: 0;
+    visibility: hidden;
 }
